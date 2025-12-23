@@ -1,4 +1,4 @@
-<img width="960" height="723" alt="image" src="https://github.com/user-attachments/assets/18700924-7ba0-41c4-9256-afd31a6d4bbd" /># BareMetal-C Tool Setup for Windows / macOS
+# BareMetal-C Tool Setup for Windows / macOS
 
 ## 0. Conventions, guidelines, and WSL preparation
 ### Conventions:
