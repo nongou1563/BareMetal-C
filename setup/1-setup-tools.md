@@ -279,7 +279,7 @@ and the prompt changes to `PS C:\...` (Windows), or `name@computername BareMetal
 
 ---
 
-## 7. How to get back to the **tool-prompt**:
+## 8. How to get back to the **tool-prompt**:
 - Make sure that `Docker Desktop` is running.
 - Make sure you're in the correct folder (`BareMetal-C`).
-- Repeat steps in section **4. Launching the tool environment** [above](#5-try-tool-command-line).
+- Repeat steps in section [**5 Try tool command line**](#5-try-tool-command-line) above.
