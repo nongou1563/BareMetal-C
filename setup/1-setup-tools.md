@@ -252,7 +252,9 @@ and it should say (not exactly, but very similar):
 > 2025-12-22 23:30:46+07 ------------ built .test.bin ------------
 > ```
 
-and finally
+## 7. Test Clean-up
+
+Go back to the tool prompt and type:
 ```
 make clean DIR='.test'
 ```
@@ -282,4 +284,4 @@ and the prompt changes to `PS C:\...` (Windows), or `name@computername BareMetal
 ## 8. How to get back to the **tool-prompt**:
 - Make sure that `Docker Desktop` is running.
 - Make sure you're in the correct folder (`BareMetal-C`).
-- Repeat steps in section [**5 Try tool command line**](#5-try-tool-command-line) above.
+- Repeat steps in section [**5. Try tool command line**](#5-try-tool-command-line) above.
