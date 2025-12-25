@@ -2,42 +2,7 @@
     "version": "2.0.0",
     "tasks": [
         {
-            "label": "1. Extract SDCC Headers",
-            "type": "shell",
-            "windows": {
-                "options": {
-                    "shell": {
-                        "executable": "powershell.exe",
-                        "args": [
-                            "-NoProfile",
-                            "-ExecutionPolicy",
-                            "Bypass",
-                            "-Command"
-                        ]
-                    }
-                },
-                "command": "if (-not (Test-Path \"${workspaceFolder}/.vscode/sdcc-include\")) { Write-Host \"Extracting SDCC Headers...\" ; docker run --rm -v \"${workspaceFolder}/.vscode:/target\" ghcr.io/kongkrit/baremetal-c cp -r /usr/share/sdcc/include /target/sdcc-include }"
-            },
-            "osx": {
-                "command": "if [ ! -d \"${workspaceFolder}/.vscode/sdcc-include\" ]; then echo \"Extracting SDCC Headers...\"; docker run --rm -v \"${workspaceFolder}/.vscode:/target\" ghcr.io/kongkrit/baremetal-c cp -r /usr/share/sdcc/include /target/sdcc-include; fi"
-            },
-            "linux": {
-                "command": "if [ ! -d \"${workspaceFolder}/.vscode/sdcc-include\" ]; then echo \"Extracting SDCC Headers...\"; docker run --rm -v \"${workspaceFolder}/.vscode:/target\" ghcr.io/kongkrit/baremetal-c cp -r /usr/share/sdcc/include /target/sdcc-include; fi"
-            },
-            "runOptions": {
-                "runOn": "folderOpen"
-            },
-            "presentation": {
-                "echo": false,
-                "reveal": "silent",
-                "focus": false,
-                "panel": "shared"
-            },
-            "problemMatcher": [],
-            "detail": "Extract SDCC headers if needed."
-        },
-        {
-            "label": "2. Build Project",
+            "label": "1. Build Project",
             "type": "shell",
             "command": "docker",
             "args": [
@@ -109,7 +74,7 @@
             "detail": "Compiles and link code."
         },
         {
-            "label": "3. Build All Projects",
+            "label": "2. Build All Projects",
             "type": "shell",
             "command": "docker",
             "args": [
@@ -135,7 +100,7 @@
             "detail": "Build all projects in 'code' and its subfolders."
         },
         {
-            "label": "4. Clean All Projects",
+            "label": "3. Clean All Projects",
             "type": "shell",
             "command": "docker",
             "args": [
