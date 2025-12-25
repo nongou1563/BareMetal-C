@@ -62,7 +62,7 @@ STRIPPED_DIR := $(shell echo '$(FIXED_DIR)' | perl -pe 's#.*(?:/BareMetal-C|/stu
 
 # 3. Echo resolved values
 # x $(info RAW_DIR:      $(RAW_DIR))
-# x $(info FIXED_DIR:    $(FIXED_DIR))
+$(info FIXED_DIR:    $(FIXED_DIR))
 $(info STRIPPED_DIR: $(STRIPPED_DIR))
 $(info RECURSE:      $(RECURSE))
 
