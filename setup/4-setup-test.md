@@ -15,12 +15,13 @@ You must have installed the following:
 
 ## 1. Build test code
 
-- Run `VS Code`
-- Open folder `BareMetal-C`
+- Run `VS Code`. Check that you are at the *Explorer* (1) and you see `✅ BareMetal-C 🤖`.
 
-  ![open folder](./pix/4-open-folder.png)
+  If you don't, click `File` and select `Open Workspace from File...` and choose `student.code-workspace`.
 
-  **IMPORTANT:** Things won't work if you open another folder. Double-check!
+  ![open folder](./pix/3-space-name.png)
+
+  **IMPORTANT:** Things won't work if you don't see ✅ and 🤖. Double-check!
 
 - Go to folder `_test_setup` and right click. Choose `Build BareMetal-C Project`
 
@@ -28,10 +29,10 @@ You must have installed the following:
 
 - The project should be built, as seen below by
   ```
-  YYYY-MM-DD HH:MM:SS+ZZ ----- built _test_setup.bin -----
+  YYYY-MM-DD HH_MM_SS +ZZZZ ----- built _test_setup.bin -----
   ```
    
-  If not, check your *tools* and *vs code* setup.
+  If not, check your *tools* and *VS code* setup.
 
   ![built](./pix/4-built.png)
 
@@ -65,7 +66,9 @@ You must have installed the following:
 
 ## 3. Troubleshooting
 
-- When starting VS Code, you **must** open `BareMetal-C` folder.
+- When starting VS Code, you **must** see `✅ BareMetal-C 🤖` while in *Explorer*.
+
+- If you don't see `✅ BareMetal-C 🤖`, click `File` and select `Open Workspace from File...` and choose `student.code-workspace`.
 
   - If you open another folder, even if it's inside `BareMetal-C`, like `BareMetal-C/code`, the *right click* menu may not show up.
 
