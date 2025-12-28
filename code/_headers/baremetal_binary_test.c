@@ -1,9 +1,9 @@
 #include <stdint.h>
 #include "baremetal_binary.h"
 
-// Point to the "Magic I/O" area defined in your memory map (0xC000 - 0xFFFF)
+// Point to the "Magic I/O" area defined in memory map (0xC000 - 0xFFFF)
 // 'volatile' is critical: it prevents the compiler from deleting "useless" writes.
-volatile uint8_t * const MAGIC_IO = (volatile uint8_t *)0xC000;
+volatile uint8_t * const MAGIC_IO = (volatile uint8_t *)0xC000U;
 
 void main(void) {
     // 1. Standard Pattern (0xAA / 170)
@@ -11,7 +11,7 @@ void main(void) {
     *MAGIC_IO = B8(10101010); // Should be 0xAA
 
     // 2. All Zeros with leading zeros logic (0x05)
-    // Goal: Verify the 0x##d paste works with leading zeros
+    // Goal: Verify the 0##d paste works with leading zeros
     *MAGIC_IO = B8(00000101); // Should be 0x05
 
     // 3. High Nibble Only (0xF0 / 240)
