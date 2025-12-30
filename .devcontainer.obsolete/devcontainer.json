@@ -2,11 +2,12 @@
     "name": "BareMetal C Student",
     "image": "ghcr.io/kongkrit/baremetal-c",
 
-    // Force copy headers on creation - used by c_cpp_properties.json
-    "postCreateCommand": "mkdir -p .vscode/sdcc-include && cp -rn /usr/share/sdcc/include/* .vscode/sdcc-include/",
-
     "workspaceMount": "source=${localWorkspaceFolder},target=/BareMetal-C,type=bind",
     "workspaceFolder": "/BareMetal-C",
+
+    // Force copy headers on creation - used by c_cpp_properties.json
+    // .vscode name is safe because the it is relative to "workspaceFolder"
+    "postCreateCommand": "if [ ! -d .vscode/sdcc-include ]; then mkdir -p .vscode/sdcc-include && cp -r /usr/share/sdcc/include/* .vscode/sdcc-include/; fi",
 
     // So we can find out whether we're inside our container
     "containerEnv": {
