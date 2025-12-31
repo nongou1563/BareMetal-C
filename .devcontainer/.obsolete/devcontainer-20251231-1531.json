@@ -18,7 +18,7 @@
         "vscode": {
             "extensions": [
                 "ms-vscode.cpptools",
-                "../_vscode-extensions/baremetal-c-builder-latest.vsix"
+                "/${containerWorkspaceFolder}/_vscode-extensions/baremetal-c-builder.vsix"
             ],
             
             "settings": {
@@ -32,6 +32,9 @@
 
                 // --- Hiding Complexity ---
                 "files.exclude": {
+
+                    // reveal files only inside container
+                    "code": false,
 
                     // Configs
                     ".devcontainer*": true,
