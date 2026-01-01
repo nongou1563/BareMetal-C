@@ -6,15 +6,36 @@
         }
     ],
 
+    "extensions": {
+        "recommendations": [
+            "ms-vscode.cpptools",
+            "ms-vscode-remote.remote-containers"
+        ],
+        // Optional: If there is a specific Microsoft extension you HATE, list it here
+        "unwantedRecommendations": [
+            "github.copilot" 
+        ]
+    },
+
     "settings": {
+        
         // distable git
         "git.enabled": false,
         "git.autofetch": false,
 
         // enforce opening folder through .code-workspace
-        "terminal.integrated.env.linux":   { "IS_WORKSPACE_OPEN": "true" },
-        "terminal.integrated.env.osx":     { "IS_WORKSPACE_OPEN": "true" },
-        "terminal.integrated.env.windows": { "IS_WORKSPACE_OPEN": "true" },
+        "terminal.integrated.env.linux": { 
+            "IS_BAREMETAL_C_WORKSPACE": "true", 
+            "OVERRIDE_CONTAINER": "false" 
+        },
+        "terminal.integrated.env.osx": { 
+            "IS_BAREMETAL_C_WORKSPACE": "true", 
+            "OVERRIDE_CONTAINER": "false" 
+        },
+        "terminal.integrated.env.windows": { 
+            "IS_BAREMETAL_C_WORKSPACE": "true", 
+            "OVERRIDE_CONTAINER": "false" 
+        },
 
         // --- Distraction-Free UI ---
         "extensions.ignoreRecommendations": false,
@@ -62,16 +83,5 @@
         },
         "search.exclude": {
         }
-    },
-
-    "extensions": {
-        "recommendations": [
-            "ms-vscode.cpptools",
-            "ms-vscode-remote.remote-containers"
-        ],
-        // Optional: If there is a specific Microsoft extension you HATE, list it here
-        "unwantedRecommendations": [
-            "github.copilot" 
-        ]
     }
 }
