@@ -51,7 +51,7 @@ Now that you have created a new user:
   
   Run it. Scroll down and check ✔
 
-  `☑ Windows Subsystem for Linux`
+  > `☑ Windows Subsystem for Linux`
 
   and click OK.
 
@@ -147,6 +147,7 @@ Now that you have created a new user:
 ---
 
   ### For macOS:
+
   - Drag and drop `Docker` into your `Applications` folder
 
   - Run `Docker` and select `Use recommended settings`
@@ -187,9 +188,11 @@ Now that you have created a new user:
 ---
 
 ## 3. Pull the course software container
+
 Windows and macOS instructions are a bit different here.
 
 ### For Windows:
+
 - Click Start Menu and type `powershell`. Hit enter. A new window opens with prompt:
   
   > `PS C:\WINDOWS\system32>`
