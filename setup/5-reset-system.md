@@ -41,7 +41,7 @@ This removes all the settings, extensions, history. It restores VS Code to a "ju
 
 - **Stop all running containers:** copy and paste into the prompt:
 
-  ```
+  ```bash
   docker stop $(docker ps -q)
   ```
 
@@ -49,7 +49,7 @@ This removes all the settings, extensions, history. It restores VS Code to a "ju
 
 - **Remove all images:** copy and paste into the prompt:
 
-  ```
+  ```bash
   docker system prune -a -f
   ```
 
