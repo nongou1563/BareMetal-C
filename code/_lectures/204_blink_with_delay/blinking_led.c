@@ -12,12 +12,12 @@ void main(void) {
     while (true) {
         *led = true;
         *c = 0;
-        while (*c < 4000) {
+        while (*c < 1500) {
             *c = *c + 1;
         }
         *led = false;
         *c = 0;
-        while (*c < 4000) {
+        while (*c < 1500) {
             *c = *c + 1;
         }
     }
