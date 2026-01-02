@@ -9,7 +9,7 @@
     "extensions": {
         "recommendations": [
             "ms-vscode.cpptools",
-            "ms-vscode-remote.remote-containers"
+            "baremetal-c-dev.baremetal-c-builder"
         ],
         // Optional: If there is a specific Microsoft extension you HATE, list it here
         "unwantedRecommendations": [
