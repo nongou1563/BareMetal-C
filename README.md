@@ -32,12 +32,14 @@ These are the reference documents for the class:
 
 - [x] 1. Read `C99 Coding Guildlines` [here](./docs-students/C99-coding-guidelines.md)
 - [x] 2. Read `C99 Style Guide` [here](./docs-students/C99-style-guide.md)
-- [ ] 3. Cheat sheet
+- [x] 3. Read `C99 Operator Precedence` [here](./docs-students/C99-operator-precedence.md)
+- [ ] 4. Cheat sheet
 
 ---
 
 ## Peripherals designed
-- [x] 1. 0xC000-0xC003 toggle switches
-- [x] 2. 0xE000-0xE003 LEDs
-- [ ] 3. numerical keypad read2clr
-- [ ] 4. directional keypad read2clr
+- [x] 0xC000-0xC003 toggle switches
+- [x] 0xE000-0xE003 LEDs
+- [x] 0xE010-0xE017 strip LEDs
+- [ ] numerical keypad read2clr
+- [ ] directional keypad read2clr
