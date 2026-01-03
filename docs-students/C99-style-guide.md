@@ -1,5 +1,3 @@
-
-
 # **Bare Metal C: C99 Style Guide**
 
 **Language:** C (SDCC Compiler/C99 Standard)
@@ -49,11 +47,13 @@ Moving from Python to C requires a shift in mindset. In C, you are managing the 
   **Why:** This improves readability and ensures step-through debuggers can stop at every specific action.
 
 **Bad (Hard to read/debug):**
+
 ```C
 if (ready) { go = true; } else { go = false; }
 ```
 
 **Good:**
+
 ```C
 if (ready) {
     go = true;
@@ -66,6 +66,7 @@ if (ready) {
   **Why:** This maintains clear visual block structure and prevents the **"dangling else"** error where the else accidentally attaches to the wrong `if` statement.
 
 **Bad (Dangling Else Risk):**
+
 ```C
 if (a > 0)
     if (b > 0)
@@ -75,12 +76,49 @@ else
 ```
 
 **Good:** Correctly resolves the ambiguity by making the compiler's default choice explicit.
+
 ```C
 if (a > 0) {
     if (b > 0) {
         c = 1;
     } else {
         c = 0;
+    }
+}
+```
+
+### Use cascaded `if-else`:
+
+When `else` is immediately followed by `if`, it is a good idea to *not* use `{` right after else, as this can make the code hard to read:
+
+**Good:** easy to understand:
+
+```C
+if (bitcoin >= 20) {
+    class = PLATINUM;
+} else if (bitcoin >= 10) {
+    class = GOLD;
+} else if (bitcoin >= 5) {
+    class = SILVER;
+} else {
+    class = REGULAR;
+}
+```
+
+**Bad:** indentation makes it hard to read:
+
+```C
+if (bitcoin >= 20) {
+    class = PLATINUM;
+} else {
+    if (bitcoin >= 10) {
+        class = GOLD;
+    } else {
+        if (bitcoin >= 5) {
+            class = SILVER;
+        } else {
+            class = REGULAR;
+        }
     }
 }
 ```
