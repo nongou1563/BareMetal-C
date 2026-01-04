@@ -78,6 +78,12 @@
 * **Rule 5.3: Keep Functions Short.**
   * Aim for < 30 lines per function.
 
+* **Rule 5.4: Named Parameter Prototypes.**
+  * Function prototypes must include **argument names** alongside data types. This clarifies the purpose of each argument (Self-Documentation) and enables better IDE support.
+  
+  * **Bad:** `void lcd_set_cursor(uint8_t, uint8_t);`
+  * **Good:** `void lcd_set_cursor(uint8_t row, uint8_t col);`
+
 ---
 
 ### **6. Bit Manipulation**
