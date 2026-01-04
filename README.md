@@ -26,6 +26,18 @@ Your environment should be ready.
 
 ---
 
+## Lecture Notes
+
+- Download lecture notes from <https://github.com/kongkrit/BareMetal-C/tree/main/slides>.
+- Right now, the following lecture notes are available. More will be available soon:
+
+  - [x] 00 Intro
+  - [x] 01 Welcome to the Digital World
+  - [ ] 02 From Text to Machine
+  - [ ] 03 ...
+  - [ ] 04 ...
+---
+
 ## Reference Documents
 
 These are the reference documents for the class:
