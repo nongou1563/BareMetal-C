@@ -10,6 +10,14 @@ If you need to restore your computer to the state where you had just freshly ins
 
 This removes all the settings, extensions, history. It restores VS Code to a "just freshly installed" state.
 
+I myself have done it more than 20 times to test the setup, and have never lost my data. But if you decide to do it, **I do not take any responsibility for your data loss.**
+
+---
+
+#### Make sure you are ok with the above note before you continue.
+
+---
+
 #### Make sure `VS Code` is not running:
 
 **macOS:**
@@ -36,6 +44,8 @@ This removes all the settings, extensions, history. It restores VS Code to a "ju
 
 #### Make sure `VS Code` is not running.
 #### Make sure `Docker Desktop` *is* running.
+
+If you use `Docker` only for our course, the method below is safe. If you also use `Docker` for other courses, contact us, and we will help you.
 
 **macOS and Windows:** Open `terminal` (macOS) or `PowerShell` (Windows):
 
