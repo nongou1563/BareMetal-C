@@ -6,7 +6,7 @@ Writing C directly to the hardware!
 - **Go to [Setup Documents](#setup-documents)**
 
 <p align="center">
-  <img src="./docs-extra/bmc-1024.jpg" width="400">
+  <img src="./docs-extra/bmc-wide.jpg" width="600">
 </p>
 
 ---
