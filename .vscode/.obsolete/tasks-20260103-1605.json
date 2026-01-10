@@ -15,7 +15,7 @@
                 "run", "--rm",
                 "-v", "${workspaceFolder}:/BareMetal-C",
                 "ghcr.io/kongkrit/baremetal-c",
-                "make",
+                "make", "-C", "/BareMetal-C/code",
                 "DIR='${fileDirname}'", 
                 "RECURSE=0"
             ],
@@ -25,7 +25,7 @@
                 "command": "/bin/sh",
                 "args": [
                     "-c",
-                    "if [ \"$IS_BAREMETAL_C_CONTAINER\" = \"true\" ]; then make DIR='${fileDirname}' RECURSE=0; else docker run --rm -v \"${workspaceFolder}:/BareMetal-C\" ghcr.io/kongkrit/baremetal-c make DIR='${fileDirname}' RECURSE=0; fi"
+                    "if [ \"$IS_BAREMETAL_C_CONTAINER\" = \"true\" ]; then make -C /BareMetal-C/code DIR='${fileDirname}' RECURSE=0; else docker run --rm -v \"${workspaceFolder}:/BareMetal-C\" ghcr.io/kongkrit/baremetal-c make -C /BareMetal-C/code DIR='${fileDirname}' RECURSE=0; fi"
                 ]
             }
         },
@@ -43,7 +43,7 @@
                 "run", "--rm",
                 "-v", "${workspaceFolder}:/BareMetal-C",
                 "ghcr.io/kongkrit/baremetal-c",
-                "make"
+                "make", "-C", "/BareMetal-C/code"
             ],
 
             // --- Linux Override (Hybrid Logic) ---
@@ -51,7 +51,7 @@
                 "command": "/bin/sh",
                 "args": [
                     "-c",
-                    "if [ \"$IS_BAREMETAL_C_CONTAINER\" = \"true\" ]; then make; else docker run --rm -v \"${workspaceFolder}:/BareMetal-C\" ghcr.io/kongkrit/baremetal-c make; fi"
+                    "if [ \"$IS_BAREMETAL_C_CONTAINER\" = \"true\" ]; then make -C /BareMetal-C/code; else docker run --rm -v \"${workspaceFolder}:/BareMetal-C\" ghcr.io/kongkrit/baremetal-c make -C /BareMetal-C/code; fi"
                 ]
             }
         },
@@ -69,7 +69,7 @@
                 "run", "--rm",
                 "-v", "${workspaceFolder}:/BareMetal-C",
                 "ghcr.io/kongkrit/baremetal-c",
-                "make",
+                "make", "-C", "/BareMetal-C/code",
                 "clean"
             ],
 
@@ -78,7 +78,7 @@
                 "command": "/bin/sh",
                 "args": [
                     "-c",
-                    "if [ \"$IS_BAREMETAL_C_CONTAINER\" = \"true\" ]; then make clean; else docker run --rm -v \"${workspaceFolder}:/BareMetal-C\" ghcr.io/kongkrit/baremetal-c make clean; fi"
+                    "if [ \"$IS_BAREMETAL_C_CONTAINER\" = \"true\" ]; then make -C /BareMetal-C/code clean; else docker run --rm -v \"${workspaceFolder}:/BareMetal-C\" ghcr.io/kongkrit/baremetal-c make -C /BareMetal-C/code clean; fi"
                 ]
             }
         }
