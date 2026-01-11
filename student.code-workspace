@@ -68,6 +68,7 @@
             "docs-*": true,
             "setup": true,
             "sim": true,
+            "slides": true,
 
             // non-C source code
             "**/*.s": true,
