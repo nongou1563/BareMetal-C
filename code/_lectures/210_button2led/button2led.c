@@ -14,12 +14,11 @@ void main(void){
     uint8_t bit_mask;
 
     while (true) {
-        // CONTROLLER, set bit mask
+        // CONTROLLER, clear bit mask
         bit_mask = B8(00000000);
         for (uint8_t i = 0; i < 8; i = i + 1) {
             if (*(PUSHBUTTON_BASE + i)) {
-                bit_mask = 1U << (7-i);
-                break;
+                bit_mask = bit_mask | ( 1U << (7-i) );
             }
         }
         // UPDATE MODEL
