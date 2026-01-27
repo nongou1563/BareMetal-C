@@ -18,7 +18,8 @@ SDOBJCOPY := sdobjcopy
 Z80DASM   := z80dasm
 
 ASMFLAGS  := -l
-CFLAGS    := -mz80 --std c99 -I_headers -I_headers_student --Werror
+CFLAGS    := -mz80 --std c99 -I_headers -I_headers_student --Werror --disable-warning 84
+# warning 84 : variable may be used before initialization
 # COPTFLAGS := --no-peep --nooverlay --nogcse --nolospre --nogenconstprop --nolabelopt --noinvariant --noinduction --noloopreverse --nostdlibcall
 COPTFLAGS :=
 LDFLAGS   := -mz80 --no-std-crt0
