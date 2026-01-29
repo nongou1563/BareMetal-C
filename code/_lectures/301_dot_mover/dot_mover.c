@@ -4,7 +4,8 @@
 
 // VIEW
 #define MATRIX_WIDTH (16)
-#define MATRIX_BASE ((volatile uint8_t *)0xE020)
+#define MATRIX_BASE ((volatile uint8_t *)0xE020U)
+#define HEX_DISP ((volatile uint8_t *)0xE800U)
 
 // CONTROLLER
 #define KEYPAD ((volatile uint8_t *)0xD010U)
@@ -79,6 +80,8 @@ void update_view(void){
     for (uint8_t i = 0; i < MATRIX_WIDTH; i=i+1) {
         *(MATRIX_BASE + i) = matrix[i];
     }
+    *(HEX_DISP +1) = row;
+    *(HEX_DISP)    = col;
 }
 
 // CONTROLLER
