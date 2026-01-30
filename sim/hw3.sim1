@@ -88,14 +88,6 @@
 <mainCompProps MainCompId="Push-144" Norm_Close="false" Poles="1" />
 </item>
 
-<item itemtype="Subcircuit" CircId="0xE040_UART-138" mainComp="false" Show_id="false" Show_Val="false" Pos="-956,100" rotation="0" hflip="1" vflip="1" label="0xE040_UART-138" idLabPos="0,-20" labelrot="0" valLabPos="-16,20" valLabRot="0" />
-
-<item itemtype="Tunnel" CircId="Tunnel-139" mainComp="false" Show_id="false" Show_Val="false" Pos="-968,116" rotation="-360" hflip="1" vflip="1" label="Tunnel-139" idLabPos="-16,-24" labelrot="0" valLabPos="-16,20" valLabRot="0" Name="DATA" IsBus="true" />
-
-<item itemtype="Tunnel" CircId="Tunnel-140" mainComp="false" Show_id="false" Show_Val="false" Pos="-972,124" rotation="0" hflip="1" vflip="1" label="Tunnel-140" idLabPos="-16,-24" labelrot="0" valLabPos="-16,20" valLabRot="0" Name="WR_" IsBus="false" />
-
-<item itemtype="Tunnel" CircId="Tunnel-141" mainComp="false" Show_id="false" Show_Val="false" Pos="-968,108" rotation="0" hflip="1" vflip="1" label="Tunnel-141" idLabPos="-16,-24" labelrot="0" valLabPos="-16,20" valLabRot="0" Name="ADDR" IsBus="true" />
-
 <item itemtype="Subcircuit" CircId="0xC010_C017_toggles-142" mainComp="false" Show_id="false" Show_Val="false" Pos="-828,20" rotation="0" hflip="1" vflip="1" label="0xC010_C017_toggles-142" idLabPos="0,-20" labelrot="0" valLabPos="-16,20" valLabRot="0" />
 
 <item itemtype="Tunnel" CircId="Tunnel-143" mainComp="false" Show_id="false" Show_Val="false" Pos="-844,28" rotation="0" hflip="1" vflip="1" label="Tunnel-143" idLabPos="-16,-24" labelrot="0" valLabPos="-16,20" valLabRot="0" Name="ADDR" IsBus="true" />
@@ -343,12 +335,6 @@
 <item itemtype="Connector" uid="Connector-389" startpinid="push_to_zero-117-OUT" endpinid="Z80-2-CPORT0NMI" pointList="-844,276,-836,276" />
 
 <item itemtype="Connector" uid="Connector-390" startpinid="push_to_zero-118-OUT" endpinid="Z80-2-CPORT0RESET" pointList="-844,292,-836,292" />
-
-<item itemtype="Connector" uid="Connector-411" startpinid="Tunnel-141-pin" endpinid="0xE040_UART-138-ADDR" pointList="-968,108,-964,108" />
-
-<item itemtype="Connector" uid="Connector-412" startpinid="Tunnel-139-pin" endpinid="0xE040_UART-138-DATA" pointList="-968,116,-964,116" />
-
-<item itemtype="Connector" uid="Connector-413" startpinid="Tunnel-140-pin" endpinid="0xE040_UART-138-WR_" pointList="-972,124,-964,124" />
 
 <item itemtype="Connector" uid="Connector-414" startpinid="Tunnel-143-pin" endpinid="0xC010_C017_toggles-142-ADDR" pointList="-844,28,-836,28" />
 
